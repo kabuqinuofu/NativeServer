@@ -1,0 +1,229 @@
+html,body{
+    margin:0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    background: url("../img/bg_q.png") 0 bottom repeat-x;
+    background-size: 100% 100%;
+    /*background-size:cover;*/
+/*    background: -webkit-linear-gradient(top,#5EB4E4 0, #4288D7); !* Safari 5.1 - 6.0 *!
+    background: -o-linear-gradient(top,#5EB4E4 0, #4288D7); !* Opera 11.1 - 12.0 *!
+    background: -moz-linear-gradient(top,#5EB4E4 0, #4288D7); !* Firefox 3.6 - 15 *!
+    background: linear-gradient(top,#5EB4E4 0, #4288D7); !* 标准的语法（必须放在最后） *!*/
+}
+body{
+    /*background: url("../img/bg_q.png") 0 top repeat-x;*/
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    border:dashed 0px #00ff00;
+}
+.main{
+    width: 929px;
+    margin: 0 auto;
+    height: 100%;
+}
+.icon img{
+    margin: 0 0 0 24px;
+    width: 266px;
+    height: 74px;
+}
+.table_cell{
+    display: inline-block;
+    width: 100%;
+}
+.slide{
+    margin-top: 34px;
+    float: left;
+}
+.drag_field{
+    margin: 71px 0 0 0;
+}
+.drag_field img{
+    width:229px;
+    height: 210px;
+}
+.drag_txt{
+    font-size: 20px;
+    color: #fff;
+    text-align: right;
+    padding-right: 36px;
+    position: relative;
+    margin: 0;
+    top:-67px;
+}
+.drag_tip{
+    margin:80% auto 0 auto;
+    text-align: center;
+}
+.format{
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 14px;
+    color:#fff;
+}
+.file_list{
+    float:left;
+    margin: 0 0 0 75px;
+    width: 564px;
+    height: 100%;
+    background: #f7f7f7;
+}
+.wifi_title{
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    background-color: #90ACC0 ;
+    margin: 0;
+    padding-left: 16px;
+}
+/*.file_list:after{
+    display: block;
+    content: "";
+    clear: both;
+}*/
+.dir{
+    width: 200px;
+    height: 30px;
+    border:1px solid #999999;
+    display: none;
+}
+.dir:hover{
+    border:1px solid #1c8dcc;
+}
+.slide_cotent{
+    float: left;
+}
+.upload_btn{
+    /*float:right;*/
+    margin: 0 -4px 0 0;
+    color:#fff;
+    font-size: 18px;
+    height:84px;
+    width:199px;
+    border: 0;
+    padding: 0;
+    background: url("../img/wifi_select_btn.png");
+}
+.upload_btn_outter{
+    width: 100%;
+}
+.upload_btn_inner{
+    float:right;
+}
+.upload_file{
+    display: none;
+}
+.table_list,.table{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table_body{
+    width: 100%;
+    height: calc(100% - 111px);
+    overflow: auto;
+}
+.table_head{
+    width: 100%;
+    margin: 55px 0 0 0;
+}
+.tr,.table_head{
+    height: 56px;
+    width: 100%;
+    display: table-row;
+}
+.table_td{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    /*border-left: #999999 1px solid;
+    border-right: #999999 1px solid;
+    border-bottom: #999999 1px solid;*/
+}
+.file_list{
+    width: 564px;
+}
+.tb_name{
+    width: 50%;
+}
+.tb_name div{
+    width: 266px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.file_list .tb_name{
+    text-align: left;
+    padding-left: 16px;
+}
+.file_list .tb_size {
+    width: 20%;
+}
+.file_list .tb_operate{
+    width: 30%;
+}
+.item_head .tb_name,.item_head .tb_size{
+    border-right: 1px #D7DFE6 solid;
+}
+.item_head{
+    background-color: #DBE8F3;
+    color: #333333;
+    font-size: 16px;
+    height: 56px;
+    /*background: url(../img/tab-thbg.png) #f9f9f9 0 bottom repeat-x;*/
+}
+.item_head,.item_table{
+    display: table;
+    width: 564px;
+}
+.item_table{
+    height: 55px;
+    /*background-color: #f7f7f7;*/
+    /*border-top: #999999 1px solid;*/
+    border-bottom: #EEF3F6 1px solid;
+}
+.item_progress{
+    background-color: #64C3FF;
+    width: 0;
+    height: 1px;
+    margin: 0;
+    padding:0;
+}
+.tr_parent{
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+}
+.oper_cell{
+    display: inline-block;
+    width: 100%;
+}
+.oper_cell img{
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.oper_cell img:hover{
+    cursor: pointer;
+}
+
+.oper_cell_txt{
+    line-height: 20px;
+}
+.uploading{
+    color:#1C7FEE;
+}
+.upload_complete{
+    color: #333333;
+}
+.upload_cancel{
+    color:#FC345D;
+}
+.item_table_failed{
+    background-color: #EEF3F6 ;
+}

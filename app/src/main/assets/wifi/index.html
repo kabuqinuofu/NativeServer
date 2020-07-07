@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Wifi传文</title>
+    <link rel="icon" type="image/x-icon" href="img/gari.png"/>
+    <link rel="stylesheet" type="text/css" href="css/wifi.css" charset="utf-8"/>
+    <script type="text/javascript" src="js/click.js"></script>
+    <script type="text/javascript" src="js/file.js"></script>
+    <script type="text/javascript" src="js/md5file.js"></script>
+    <script type="text/javascript" src="js/spark-md5.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="slide">
+        <div class="icon">
+            <img src="img/wifi_logo.png" alt="手机知网"/>
+        </div>
+        <div class="slide_cotent">
+            <div class="drag_field" id="drage_file">
+                <img src="img/wifi_tuo_btn.png" alt="拖拽到此处上传"/>
+                <p class="drag_txt">拖拽此处上传</p>
+            </div>
+            <form class="upload" method="post" enctype="multipart/form-data">
+                <input class="dir" id="textfield" name="fname" type="text"/>
+                <input type="file" id="scan" class="upload_file" name="upload_file"/>
+                <div class="upload_btn_outter">
+                    <div class="upload_btn_inner">
+                        <input type="button" id="fake_scan" class="upload_btn" value="选择文件"/>
+                        <p class="format" id="up_format">支持EPUB、PDF、CAJ格式</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="file_list">
+        <p class="wifi_title">WiFi传书列表</p>
+        <div class="table">
+            <div class="item_head">
+                <div class="table_td tb_name">文件名</div>
+                <div class="table_td tb_size">大小</div>
+                <div class="table_td tb_operate">操作</div>
+            </div>
+        </div>
+        <div class="table_body">
+            <div class="table_list" id="wifi_file_list">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+include ':HttpServer'
+include ':app'
+rootProject.name = "NativeServer"
