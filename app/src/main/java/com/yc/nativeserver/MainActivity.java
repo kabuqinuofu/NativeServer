@@ -28,8 +28,23 @@ public class MainActivity extends AppCompatActivity implements UploadListener {
         mNativeServerManager.setUploadListener(this);
         mNativeServerManager.setResDir("wifi");
         mNativeServerManager.setPort(12345);
-        mNativeServerManager.startServer();
         notice_tv.setText("内网打开：http://" + getIPAddress() + ":" + mNativeServerManager.getPort());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mNativeServerManager != null) {
+            mNativeServerManager.startServer();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mNativeServerManager != null) {
+            mNativeServerManager.stopServer();
+        }
     }
 
     @Override
@@ -57,10 +72,4 @@ public class MainActivity extends AppCompatActivity implements UploadListener {
         return Formatter.formatIpAddress(wifiInfo.getIpAddress());
     }
 
-    @Override
-    protected void onDestroy() {
-        if (mNativeServerManager != null)
-            mNativeServerManager.stopServer();
-        super.onDestroy();
-    }
 }

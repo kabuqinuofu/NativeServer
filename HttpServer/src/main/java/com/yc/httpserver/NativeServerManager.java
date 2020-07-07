@@ -66,6 +66,7 @@ public class NativeServerManager {
 
     public void startServer(int timeout) {
         if (httpServer == null) {
+            fileMaps.clear();
             fileMaps.putAll(StaticResUtils.getFiles(resDir, fileNameFilter));
             try {
                 httpServer = new HttpServer(port, getSaveDir(), getUploadListener());
@@ -83,10 +84,9 @@ public class NativeServerManager {
      * 关闭服务
      */
     public void stopServer() {
-        if (httpServer != null) {
-            if (httpServer.isAlive()) {
-                httpServer.stop();
-            }
+        if (httpServer != null && httpServer.isAlive()) {
+            httpServer.stop();
+            httpServer = null;
         }
     }
 
